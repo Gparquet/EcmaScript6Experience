@@ -1,0 +1,28 @@
+{
+  "name": "ecmascript6experience",
+  "version": "1.0.0",
+  "description": "Discover ECMA Script 6 Project",
+  "main": "es6.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gparquet/EcmaScript6Experience.git"
+  },
+  "author": "Geoffrey Parquet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gparquet/EcmaScript6Experience/issues"
+  },
+  "homepage": "https://github.com/Gparquet/EcmaScript6Experience#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "file-system": "^2.2.2",
+    "http-proxy-middleware": "^0.19.0",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.4"
+  }
+}
