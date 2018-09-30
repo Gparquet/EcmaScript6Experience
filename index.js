@@ -8,7 +8,7 @@ const contactService = require('./contact/contact.service');
 const port = 3000;
 const app = express();
 app.use(bodyParser.json());
-
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const apiRoutes = express.Router();
 const mockUrl = process.env.MOCKS_URL;
 
@@ -30,7 +30,31 @@ if (mockUrl) {
         setTimeout(() => {
             res.send(contactService.allContact());
         }, 200);
+    }).post(urlencodedParser,(req, res) => {
+        setTimeout(() => {
+            const contact = {
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                phoneNumber: req.body.phoneNumber,
+                email: req.body.email
+            };
+            const contacts = contactService.addNewContact(contact);
+            console.log(contacts);
+            if (contacts) {
+                fs.writeFile('./contact/contact.json', JSON.stringify(contacts), err => {
+                    console.log(err);
+                    if (err) {
+                        res.status(202).send('');
+                    } else {
+                        res.status(500).send('');
+                    }
+                });
+            } else {
+                res.status(500).send('');
+            }
+        }, 200);
     });
+
     apiRoutes.route('/contacts/:id').get((req, res) => {
         setTimeout(() => {
             res.send(contactService.findContactById(req.params.id));

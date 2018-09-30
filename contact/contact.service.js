@@ -41,16 +41,18 @@ const findContactsByLastName = (allContacts = contacts.data) => (lastName) => {
 
 const addNewContact = (allContacts = contacts.data) => (contact) => {
     let allContactTemp = allContacts;
-    const existedContact = findContactsByFirstAndLastName(allContactTemp)
-        (contact.firstName, contact.lastName);
+    const {firstName, lastName, phoneNumber, email} = contact;
 
-    if (!existedContact) {
+    const existedContact = findContactsByFirstAndLastName(allContactTemp)
+        (firstName, lastName);
+
+    if (!existedContact.firstName) {
         allContacts.push({
             id: uuidv4(),
-            firstName: contact.firstName,
-            lastName: contact.lastName,
-            phoneNumber: contact.phoneNumber,
-            email: contact.email
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            email: email
         });
         return allContactTemp;
     }
@@ -67,5 +69,6 @@ const updateContact = () => {
 module.exports = {
     findContactById: findContactById(),
     allContact: allContact,
-    findContactsByFirstAndLastName: findContactsByFirstAndLastName()
+    findContactsByFirstAndLastName: findContactsByFirstAndLastName(),
+    addNewContact: addNewContact()
 }
