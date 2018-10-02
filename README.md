@@ -34,26 +34,12 @@ Step 2 : Let's GO !
 ```
 1°) Rename data folder by contact.
 2°) Create an contact service for all methodes that parse contact.json file. This name can called : contact.service.js file.
-3°) Create an contact classe file that'll represent a contact. This name can called : contact.class.js file.  
-
-	* Use syntactic sugar class
-	* Use Computed Property Names
-```
-
-Step 3 : Create contact class
 
 ```
-1°) In the file that we have previously, add attributs:
- * identification
- * last name
- * first name
- * phone number 
- * email  
 
-2°) When the class constructor is called, the properties above are mandatory.
 ```
 
-Step 4 : Enhance contact service
+Step 3 : Enhance contact service
 
 ```
 1°1) Create method that return a contact by his first and last name. If user not found, the function return message for exemple (User [first name] [last Name] not found).
@@ -86,7 +72,7 @@ Skills :
 
 ```
 
-Step 5 : Export functions created in service constant
+Step 4 : Export functions created in service constant
 
 ```
 Create contact service variable and add functions previously created and export it.
@@ -104,5 +90,4 @@ Create contact service variable and add functions previously created and export 
 * Arrow Function 
 * Spread Operator 
 * Modules 
-* Classes
 * Literal Expression (String interpolation)
