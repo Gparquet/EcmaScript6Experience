@@ -27,6 +27,7 @@ if (mockUrl) {
         res.send('Mocks are running');
     });
     apiRoutes.route('/contacts').get((req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
         setTimeout(() => {
             res.send(contactService.allContact());
         }, 200);
