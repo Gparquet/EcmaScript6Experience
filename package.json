@@ -23,7 +23,7 @@
     "file-system": "^2.2.2",
     "http-proxy-middleware": "^0.19.0",
     "lodash": "^4.17.11",
-    "nodemon": "^1.18.4",
+    "nodemon": "^1.18.8",
     "uuid": "^3.3.2"
   }
 }
