@@ -16,71 +16,71 @@ What things you need to install the software and how to install them
  * (use your favorite IDE)
 ```
 
-### Installing
+### Installation
 
 A step by step series of examples that tell you how to get a development env running
 
-Step 1 : Configuration and install root project
+### Step 1 : Clone projet [EcmaScript6Experience](https://github.com/Gparquet/EcmaScript6Experience.git)
 
-```
-1°) Clone or download this repository : https://github.com/Gparquet/EcmaScript6Experience.git
 
-2°) go into folder and type this commande --> npm install
- 
+```bash
+git clone https://github.com/Gparquet/EcmaScript6Experience.git
 ```
 
-Step 2 : Let's GO !
+### Step 2 : Installation
 
-```
-1°) Rename data folder by contact.
-2°) Create an contact service for all methodes that parse contact.json file. This name can called : contact.service.js file.
+Use the package manager [npm](https://docs.npmjs.com/cli/install) to install EcmaScriptExperience
 
-```
-
+```bash
+npm install
 ```
 
-Step 3 : Enhance contact service
+### Step 3 : Let's GO !
 
-```
-1°1) Create method that return a contact by his first and last name. If user not found, the function return message for exemple (User [first name] [last Name] not found).
 
-Skills : 
-	* Use arrow function 
-	* Use litteral expression 
-	* Use lodash utility library 
+In **Contact folder**, create an **contact.service.js** file, that will contain **all methodes that parse contact.json** file.
 
-1°2) Update the index.js file by adding the route to the created method
 
-2°1) Create method that return a contact by his identification number and create another by lastName. If user not found, the function return message for exemple (User [first name] [last Name] not found).
+### Step 4 : Enhance contact service 
 
-Skills :
-	* Use arrow function
-	* Use litteral expression 
-	* Use lodash utility library 
+#### 1 . ***Create method that return a contact by his first and last name.***
 
-2°2) Update the index.js file by adding the route to the created method
+If user not found, **the function return message** for exemple (User [first name] [last Name] not found).
 
-3°1) Create method that add a new contact to existing list. If user not found, the function return message for exemple (User [first name] [last Name] not found).
+**Skills** : 
+- Use arrow function 
+- Use litteral expression 
+- Use lodash utility library 
 
-Skills :
-	* Use arrow function
-	* Use destructuring 
-	* Use litteral expression (string interpolation)
-	* Use default parameter value
+For realise this you must **update the index.js** file by **adding the route** to the created method
 
-3°2) Update the index.js file by adding the route to the created method
+#### 2 . ***Create two search method that return a contact. One by his identification number and another by lastName. If user not found, the function return message for exemple (User [first name] [last Name] not found).***
 
-```
+**Skills** :
+- Use arrow function
+- Use litteral expression 
+- Use lodash utility library (if you want).  
 
-Step 4 : Export functions created in service constant
+For realise this you must **update the index.js** file by **adding the route** to the created method
 
-```
+#### 3 . ***Create method that add a new contact to existing list. If user not found, the function return message for exemple (User [first name] [last Name] not found).***
+
+**Skills** :
+- Use arrow function
+- Use destructuring 
+- Use litteral expression (string interpolation)
+- Use default parameter value
+
+For realise this you must **update the index.js** file by **adding the route** to the created method
+
+### Step 5 : Export functions created in service constant
+
 Create contact service variable and add functions previously created and export it.
-```
+
 
 ## Authors
 
-* **Geoffrey Parquet** - *Initial work* - [PersonalGit](https://github.com/Gparquet/)
+* **Geoffrey Parquet** - [PersonalGit](https://github.com/Gparquet/)
 
 ## Acknowledgments
 
