@@ -38,8 +38,12 @@ npm install
 ### Step 3 : Let's GO !
 
 
-In **Contact folder**, create an **contact.service.js** file, that will contain **all methodes that parse contact.json** file.
+In **Contact folder**, create two files :
 
+- **contact.service.js** file : will contain **all methodes that parse contact.json** file.
+- **contact.service.spec.js** file: will container **all tests of each methods** that will make in contact.service file.
+
+Be carefull, each development must be done in the TDD way. This implies that each method must have one or more associated tests.
 
 ### Step 4 : Enhance contact service 
 
