@@ -1,18 +1,14 @@
-const _ = require('lodash');
 const uuidv4 = require('uuid/v4');
 
 const contacts = require('./contact.json');
 
-const commonFind = (allContact) => (propertyName, propertyValue) => {
-    
-     const userFounded = _.filter(allContact, (currentContact) => {
-        return currentContact[propertyName] === propertyValue;
-    });
+const commonFind = allContact => (propertyName, value) => {
+    const contactFounded = allContact.find(currentContact=>currentContact[propertyName] === value);
 
-    if(userFounded) {
-        return userFounded;
+    if(contactFounded) {
+        return { contact: contactFounded, message: ''};
     }
-    return `User ${firstName} ${lastName} not found`;
+    return { contact: contactFounded, message: `Contact with ${propertyName} property and value : ${value} not found`};
 };
 
 
@@ -25,14 +21,12 @@ const findContactById = (allContacts = contacts.data) => (id) => {
 };
 
 const findContactsByFirstAndLastName = (allContacts = contacts.data) => (firstName, lastName) => {
-    const userFounded = _.find(allContacts, (currentContact) => {
-        return currentContact.firstName === firstName && currentContact.lastName === lastName;
-    });
+    const contactsFounded = allContacts.filter(currentContact=>currentContact.firstName === firstName && currentContact.lastName === lastName);
 
-    if(userFounded) {
-        return userFounded;
+    if(contactsFounded.length === 0) {
+        return { contacts: contactsFounded, message: `Users with first name : ${firstName} and lastName : ${lastName} not found`};
     }
-    return `User ${firstName} ${lastName} not found`;
+    return {contacts: contactsFounded, message :''};
 };
 
 const addNewContact = (allContacts = contacts.data) => (contact) => {

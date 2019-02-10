@@ -7,6 +7,12 @@
 		"start": "nodemon index.js",
 		"test": "jest"
 	},
+	"jest": {
+		"transform": {
+			"^.+\\.jsx?$": "babel-jest"
+		},
+		"collectCoverage": true
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Gparquet/EcmaScript6Experience.git"
@@ -27,6 +33,7 @@
 		"nodemon": "^1.18.8"
 	},
 	"devDependencies": {
+		"@babel/preset-env": "^7.3.1",
 		"babel-jest": "^24.1.0",
 		"jest": "^24.1.0"
 	}
