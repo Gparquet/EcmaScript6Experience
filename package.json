@@ -25,5 +25,8 @@
     "lodash": "^4.17.11",
     "nodemon": "^1.18.8",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }
