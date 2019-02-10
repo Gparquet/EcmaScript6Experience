@@ -35,10 +35,6 @@ const findContactsByFirstAndLastName = (allContacts = contacts.data) => (firstNa
     return `User ${firstName} ${lastName} not found`;
 };
 
-const findContactsByLastName = (allContacts = contacts.data) => (lastName) => {
-    return commonFind(allContacts)('lastName', lastName);
-};
-
 const addNewContact = (allContacts = contacts.data) => (contact) => {
     let allContactTemp = allContacts;
     const {firstName, lastName, phoneNumber, email} = contact;
@@ -60,10 +56,6 @@ const addNewContact = (allContacts = contacts.data) => (contact) => {
     return {
         errorMessage: `This Contact with firstName : ${contact.firstName} and lastName : ${contact.lastName}`
     }
-};
-
-const updateContact = () => {
-    
 };
 
 module.exports = {
