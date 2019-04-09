@@ -29,14 +29,14 @@ const findContactsByFirstAndLastName = (allContacts = contacts.data) => (firstNa
     return {contacts: contactsFounded, message :''};
 };
 
-const addNewContact = (allContacts = contacts.data) => (contact) => {
-    let allContactTemp = allContacts;
+const addNewContact = (contact) => {
+    let allContactTemp = contacts;
     const {firstName, lastName, phoneNumber, email} = contact;
 
     const existedContact = findContactsByFirstAndLastName(allContactTemp)
         (firstName, lastName);
 
-    if (!existedContact.firstName) {
+    if (existedContact.contacts) {
         allContacts.push({
             id: uuidv4(),
             firstName: firstName,
@@ -56,5 +56,5 @@ module.exports = {
     findContactById: findContactById(),
     allContact: allContact,
     findContactsByFirstAndLastName: findContactsByFirstAndLastName(),
-    addNewContact: addNewContact()
+    addNewContact: addNewContact
 }
