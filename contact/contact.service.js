@@ -52,9 +52,16 @@ const addNewContact = (contact) => {
     }
 };
 
+const loadNameAndLastName = (name, lastName)=>{
+    return `Hello ${name} ${lastName}`;
+};
+
 module.exports = {
     findContactById: findContactById(),
     allContact: allContact,
     findContactsByFirstAndLastName: findContactsByFirstAndLastName(),
-    addNewContact: addNewContact
+    addNewContact: addNewContact,
+    loadNameAndLastName
 }
+
+parquet.geoffrey@gmail.com
